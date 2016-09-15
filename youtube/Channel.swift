@@ -6,4 +6,9 @@
 //  Copyright © 2016 scorpio. All rights reserved.
 //
 
-import Foundation
+import UIKit
+
+class Channel: NSObject {
+    var name: String?
+    var profileImageName : String?
+}

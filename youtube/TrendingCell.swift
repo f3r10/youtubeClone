@@ -6,8 +6,15 @@
 //  Copyright © 2016 scorpio. All rights reserved.
 //
 
-import Cocoa
+import UIKit
 
 class TrendingCell: FeedCell {
+    
+    override func fetchVideos() {
+        Api.sharedInstance.fetchTrendingFeed { (videos : [Video]) in
+            self.videos = videos
+            self.collectionView.reloadData()
+        }
+    }
 
 }
